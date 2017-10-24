@@ -7,3 +7,11 @@ Ustalanie wielkości pojedynczej reklamy oraz obliczanie ile reklam zmieści si�
 tworzenie DOM za pomocą React
 
 LIVE: https://erwin0917.github.io/BanerReact/index.html
+
+
+Wykorzystano:
+-SASS
+-ES6
+-React
+-Gulp
+-Babel

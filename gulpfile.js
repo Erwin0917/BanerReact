@@ -3,6 +3,7 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
+const babel = require("gulp-babel");
 
 
 // Static Server + watching scss/html files

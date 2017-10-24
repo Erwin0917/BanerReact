@@ -30,7 +30,14 @@ class AdBanner {
   }
 
   init() {
+    this.setOrientation();
     this.shuffleData(this.data);
+  }
+
+  setOrientation() {
+    if (this.container.offsetWidth > this.container.offsetHeight) {
+      this.container.classList.add('horizontal');
+    } else this.container.classList.add('vertical');
   }
 
   shuffleData(data) {
