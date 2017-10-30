@@ -1,3 +1,6 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+
 function getData(url) {
   const xhr = new XMLHttpRequest();
 

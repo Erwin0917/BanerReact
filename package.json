@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "babel": "babel js/src/adsBannerScript.jsx -o js/adsBannerScript.js"
+    "babel": "babel js/src/adsBannerScript.jsx -o js/adsBannerScript.js",
+    "prebuild": "npm run clean",
+    "build": "webpack",
+    "clean": "rimraf js/dist"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-env": "^2.4.1",
+    "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -23,6 +29,13 @@
     "gulp-autoprefixer": "^4.0.0",
     "gulp-install": "^1.1.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0"
+    "gulp-sourcemaps": "^2.6.0",
+    "rimraf": "^2.6.2",
+    "webpack": "^3.8.1"
+  },
+  "dependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack-assets-manifest": "^1.0.0"
   }
 }
