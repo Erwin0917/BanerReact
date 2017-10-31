@@ -1,6 +1,5 @@
 const {resolve} = require("path");
-const WebpackAssetsManifest = require("webpack-assets-manifest");
-
+const webpack = require('webpack');
 
 
 module.exports = {
@@ -9,8 +8,8 @@ module.exports = {
 	output: {
 		path: resolve(__dirname, "js/dist/"),
         filename: 'adsBannerScript-[hash].js',
-        chunkFilename: 'adsBannerScript-[hash].js'
 	},
+
 
 	module: {
 		rules: [
@@ -37,7 +36,15 @@ module.exports = {
 	},
 
 	plugins: [
-        new WebpackAssetsManifest()
+		new webpack.optimize.UglifyJsPlugin({
+
+				  compress: {
+
+					warnings: false
+
+				  }
+
+				})
 	]
 
 };
